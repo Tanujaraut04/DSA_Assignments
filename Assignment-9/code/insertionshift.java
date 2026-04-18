@@ -9,15 +9,13 @@ class Demo{
 		for(int i=0;i<arr.length;i++){
 			arr[i]=s.nextInt();
 		}
-		for(int i=0;i<arr.length-1;i++){
-			int num=i;
-			int current=arr[i+1];
-			while(num>=0){
+		for(int i=1;i<arr.length;i++){
+			int num=i-1;
+			int current=arr[i];
+			while(num>=0&&arr[num]>current){
 				
-				if(arr[num]<current){					
-					break;
-				}
-				arr[i+1]=arr[num];
+				arr[num+1]=arr[num];					
+				
 				num--;
 			}
 		arr[num+1]=current;	
