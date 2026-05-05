@@ -8,17 +8,18 @@ class Demo{
 		int[]arr=new int[len];
 		for(int i=0;i<arr.length;i++){
 			arr[i]=s.nextInt();
-		}boolean isoptimize=false;
+		}
 		for(int i=0;i<arr.length;i++){
+			boolean isoptimize=true;
 			for(int j=0;j<arr.length-1-i;j++){
 				if(arr[j]>arr[j+1]){
 					int temp=arr[j];
 					arr[j]=arr[j+1];
 					arr[j+1]=temp;
-					isoptimize=true;
+					isoptimize=false;
 				}
 			}
-			if(!isoptimize){
+			if(isoptimize){
 				break;
 			}
 				
